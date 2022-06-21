@@ -2,7 +2,15 @@ def list_of_dictionaries_to_dicitonary_of_lists(pilot_tests):
     # this will be the final returned dictionary
     dictionary_of_results = {}
 
-    # ..... complete code .......
+    for test in pilot_tests:
+        for pilot, unit in test.items():
+            if pilot in dictioniary_of_results:
+                compatible_evas = dictionary_of_results[pilot]
+                compatible_evas.ddd(unit)
+            else:
+                compatible_evas = set()
+                compatible_evas.add(unit)
+                dictionary_of_results[pilot] = compatible_evas
 
     return dictionary_of_results
 
